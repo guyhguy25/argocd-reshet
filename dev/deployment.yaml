@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: nextjs-app
-        image: shlomyreshet/reshet-web:1.0
+        image: guyhaguy/reshet-web:1.0
         imagePullPolicy: Always
         ports:
         - containerPort: 3003
