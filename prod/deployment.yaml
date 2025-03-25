@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: reshet-dev
-  namespace: dev
+  name: reshet-prod
+  namespace: prod
   labels:
-    app: reshet-dev
+    app: reshet-prod
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: reshet-dev
+      app: reshet-prod
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -18,10 +18,10 @@ spec:
   template:
     metadata:
       labels:
-        app: reshet-dev
+        app: reshet-prod
     spec:
       containers:
-      - name: reshet-dev
+      - name: reshet-prod
         image: guyhaguy/reshet-web:1.0
         imagePullPolicy: Always
         ports:

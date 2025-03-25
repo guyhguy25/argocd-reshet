@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: reshet-dev-ingress
-  namespace: dev
+  name: reshet-stag-ingress
+  namespace: stag
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/use-regex: "true"
@@ -10,13 +10,13 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: reshetdev.guyhaguy.com
+  - host: reshetstag.guyhaguy.com
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: reshet-dev
+            name: reshet-stag
             port:
               number: 80

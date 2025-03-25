@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: reshet-prod
+  name: reshet-stag
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/guyhguy25/argocd-reshet
     targetRevision: HEAD
-    path: prod
+    path: stag
   destination:
     server: https://kubernetes.default.svc
-    namespace: prod
+    namespace: stag
   syncPolicy:
     automated:
       prune: true
