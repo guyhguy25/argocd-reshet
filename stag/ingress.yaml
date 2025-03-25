@@ -19,4 +19,4 @@ spec:
           service:
             name: reshet-stag
             port:
-              number: 8082
+              number: 80

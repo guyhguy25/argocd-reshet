@@ -19,4 +19,4 @@ spec:
           service:
             name: reshet-dev
             port:
-              number: 8083
+              number: 80
